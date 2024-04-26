@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://ckhan4rp15w1y"]
+
+[ext_resource type="Script" path="res://databases/characters.gd" id="1_7tolc"]
+[ext_resource type="Script" path="res://resources/stats.gd" id="2_nlltg"]
+
+[sub_resource type="Resource" id="Resource_c3631"]
+script = ExtResource("2_nlltg")
+name = "Odavaror Trollsban"
+description = "description"
+skills = "skills"
+max_health = 135.0
+base_attack = 15.0
+damage_reduction = 1.25
+heal = 0.0
+speed_coef = 1.0
+jump_force_coef = 1.0
+punch_force_coef = 1.0
+critical_chance = 0.0
+dodge_chance = 0.0
+sprites_path = "res://assets/players/Woodcutter/Woodcutter_sheet.png"
+
+[sub_resource type="Resource" id="Resource_8b1el"]
+script = ExtResource("2_nlltg")
+name = "Mary Kinnard"
+description = "description"
+skills = "skills"
+max_health = 10.0
+base_attack = 10.0
+damage_reduction = 1.0
+heal = 0.0
+speed_coef = 1.2
+jump_force_coef = 1.2
+punch_force_coef = 1.0
+critical_chance = 0.0
+dodge_chance = 0.25
+sprites_path = "res://assets/players/GraveRobber/GraveRobber_sheet.png"
+
+[sub_resource type="Resource" id="Resource_0ya4i"]
+script = ExtResource("2_nlltg")
+name = "name"
+description = "description"
+skills = "skills"
+max_health = 100.0
+base_attack = 10.0
+damage_reduction = 1.0
+heal = 5.0
+speed_coef = 1.0
+jump_force_coef = 1.0
+punch_force_coef = 1.2
+critical_chance = 0.2
+dodge_chance = 0.0
+sprites_path = "res://assets/players/SteamMan/SteamMan_sheet.png"
+
+[node name="Characters" type="Node"]
+script = ExtResource("1_7tolc")
+characters = Array[ExtResource("2_nlltg")]([SubResource("Resource_c3631"), SubResource("Resource_8b1el"), SubResource("Resource_0ya4i")])

@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://dmeagorjxtk7s"]
+
+[ext_resource type="Texture2D" uid="uid://byxsngonx26et" path="res://assets/black_texture.png" id="1_cn6hc"]
+[ext_resource type="Script" path="res://scripts/life_bar.gd" id="1_eqxws"]
+[ext_resource type="Texture2D" uid="uid://cfhbehfvpiw31" path="res://assets/white_texture.png" id="2_j0wtx"]
+[ext_resource type="FontFile" uid="uid://dxlsut35eqna4" path="res://assets/font.otf" id="3_hn6i3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nj5p1"]
+font = ExtResource("3_hn6i3")
+font_size = 32
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="LifeBar" type="VBoxContainer"]
+layout_direction = 2
+offset_right = 370.0
+offset_bottom = 95.0
+size_flags_horizontal = 0
+theme_override_constants/separation = 15
+script = ExtResource("1_eqxws")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+custom_minimum_size = Vector2(350, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+step = 0.5
+value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("1_cn6hc")
+texture_progress = ExtResource("2_j0wtx")
+tint_progress = Color(0, 1, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "x/y"
+label_settings = SubResource("LabelSettings_nj5p1")
+vertical_alignment = 2

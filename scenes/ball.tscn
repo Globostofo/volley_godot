@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1akmr5ryofqc"]
+
+[ext_resource type="Texture2D" uid="uid://bq6rokuqj1u8s" path="res://assets/ball.png" id="1_yh6r8"]
+[ext_resource type="Shape2D" uid="uid://c5gvaqek1dfd3" path="res://resources/collisions/ball.tres" id="3_853la"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fojut"]
+bounce = 1.0
+
+[node name="Ball" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 8
+physics_material_override = SubResource("PhysicsMaterial_fojut")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_yh6r8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("3_853la")
+
+[node name="PunchArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PunchArea"]
+shape = ExtResource("3_853la")
